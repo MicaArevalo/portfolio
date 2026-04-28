@@ -112,7 +112,7 @@ const translations = {
     'contact.intro':         "I'm always open to discussing new opportunities, architectural challenges, or simply connecting with fellow engineers. Feel free to reach out!",
     'contact.emailLabel':    'Email',
     'contact.locationLabel': 'Location',
-    'contact.locationValue': 'Argentina · Remote-ready',
+    'contact.locationValue': 'Argentina',
 
     'footer.builtBy': 'Designed &amp; built by',
   },
