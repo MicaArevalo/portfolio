@@ -32,6 +32,7 @@ const translations = {
     'nav.about':      'About',
     'nav.skills':     'Skills',
     'nav.experience': 'Experience',
+    'nav.projects':   'Projects',
     'nav.contact':    'Contact',
 
     'hero.tagline':        '9+ years building the scalable backend systems for<br>banking &amp; fintech — one API at a time.',
@@ -93,9 +94,22 @@ const translations = {
     'exp.job7.desc':   'Started my professional career building enterprise intranet and SharePoint solutions for major clients across multiple industries.',
     'exp.job7.li1':    'Developed SharePoint solutions for AVON, EDENOR, YACYRETÁ, and Sofrecom France',
 
-    'contact.tag':           '04 · Contact',
+    'projects.tag':           '04 · Projects',
+    'projects.title':         'Open Source',
+    'projects.viewRepo':      'View on GitHub',
+    'projects.nodeProducer':  'Producer',
+    'projects.nodeProcessor': 'Processor',
+    'projects.desc':          'Real-time fintech analytics pipeline that processes transaction events at scale, detects anomalies, and streams live metrics to a dashboard.',
+    'projects.feat1':         'Kafka with idempotent producers, manual offset commits, and Dead Letter Queue',
+    'projects.feat2':         'Anomaly detection via 3σ standard deviation and per-account velocity thresholds',
+    'projects.feat3':         '1-minute window aggregation with P90/P95/P99 latency metrics cached in Redis',
+    'projects.feat4':         'SignalR push updates every 2 seconds to a React + Recharts live dashboard',
+    'projects.feat5':         'Real integration tests with Testcontainers — no mocks',
+    'projects.ghProfile':     'View GitHub Profile',
+
+    'contact.tag':           '05 · Contact',
     'contact.title':         "Let's Connect",
-    'contact.intro':         "I'm always open to discussing new opportunities, architectural challenges, or simply connecting with people in IT. Feel free to reach out!",
+    'contact.intro':         "I'm always open to discussing new opportunities, architectural challenges, or simply connecting with fellow engineers. Feel free to reach out!",
     'contact.emailLabel':    'Email',
     'contact.locationLabel': 'Location',
     'contact.locationValue': 'Argentina · Remote-ready',
@@ -114,6 +128,7 @@ const translations = {
     'nav.about':      'Sobre mí',
     'nav.skills':     'Habilidades',
     'nav.experience': 'Experiencia',
+    'nav.projects':   'Proyectos',
     'nav.contact':    'Contacto',
 
     'hero.tagline':        '9+ años construyendo sistemas backend escalables para<br>banca y fintech — una API a la vez.',
@@ -175,7 +190,20 @@ const translations = {
     'exp.job7.desc':   'Inicio de mi carrera profesional construyendo soluciones de intranet corporativa y SharePoint para grandes clientes de múltiples industrias.',
     'exp.job7.li1':    'Desarrollo de soluciones SharePoint para AVON, EDENOR, YACYRETÁ y Sofrecom France',
 
-    'contact.tag':           '04 · Contacto',
+    'projects.tag':           '04 · Proyectos',
+    'projects.title':         'Open Source',
+    'projects.viewRepo':      'Ver en GitHub',
+    'projects.nodeProducer':  'Productor',
+    'projects.nodeProcessor': 'Procesador',
+    'projects.desc':          'Pipeline de analítica fintech en tiempo real que procesa eventos de transacciones a escala, detecta anomalías y transmite métricas en vivo a un dashboard.',
+    'projects.feat1':         'Kafka con productores idempotentes, commits manuales y Dead Letter Queue',
+    'projects.feat2':         'Detección de anomalías por desviación estándar 3σ y umbrales de velocidad por cuenta',
+    'projects.feat3':         'Agregación en ventana de 1 minuto con métricas P90/P95/P99 cacheadas en Redis',
+    'projects.feat4':         'SignalR con actualizaciones cada 2 segundos a un dashboard live React + Recharts',
+    'projects.feat5':         'Tests de integración reales con Testcontainers — sin mocks',
+    'projects.ghProfile':     'Ver Perfil de GitHub',
+
+    'contact.tag':           '05 · Contacto',
     'contact.title':         'Conectemos',
     'contact.intro':         '¡Siempre estoy abierta a discutir nuevas oportunidades, desafíos arquitectónicos o simplemente conectar con personas del mundo IT. No dudes en escribirme!',
     'contact.emailLabel':    'Correo',
@@ -198,7 +226,9 @@ function applyTranslations(lang) {
     if (key in t) el.innerHTML = t[key];
   });
   document.documentElement.lang = lang;
-  document.getElementById('langToggle').textContent = lang === 'en' ? 'ES' : 'EN';
+  const btn = document.getElementById('langToggle');
+  btn.textContent  = lang === 'en' ? 'ES' : 'EN';
+  btn.setAttribute('aria-label', lang === 'en' ? 'Switch to Spanish' : 'Switch to English');
 }
 
 function setLanguage(lang) {
@@ -275,6 +305,24 @@ function initParticles() {
   }
 }
 
+let resizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => { resize(); initParticles(); }, 150);
+}, { passive: true });
+
+canvas.addEventListener('mousemove', e => {
+  const rect = canvas.getBoundingClientRect();
+  mouse.x = e.clientX - rect.left;
+  mouse.y = e.clientY - rect.top;
+}, { passive: true });
+
+canvas.addEventListener('mouseleave', () => {
+  mouse.x = -9999;
+  mouse.y = -9999;
+});
+
+let rafId;
 function drawParticles() {
   ctx.clearRect(0, 0, W, H);
 
@@ -326,28 +374,22 @@ function drawParticles() {
     }
   }
 
-  requestAnimationFrame(drawParticles);
+  rafId = requestAnimationFrame(drawParticles);
 }
 
-window.addEventListener('resize', () => {
-  resize();
-  initParticles();
-}, { passive: true });
-
-canvas.addEventListener('mousemove', e => {
-  const rect = canvas.getBoundingClientRect();
-  mouse.x = e.clientX - rect.left;
-  mouse.y = e.clientY - rect.top;
-}, { passive: true });
-
-canvas.addEventListener('mouseleave', () => {
-  mouse.x = -9999;
-  mouse.y = -9999;
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    cancelAnimationFrame(rafId);
+  } else {
+    rafId = requestAnimationFrame(drawParticles);
+  }
 });
 
 resize();
 initParticles();
-drawParticles();
+rafId = requestAnimationFrame(drawParticles);
+
+document.getElementById('footerYear').textContent = new Date().getFullYear();
 
 /* ============================================
    SCROLL REVEAL  (IntersectionObserver)
