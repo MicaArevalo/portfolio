@@ -16,15 +16,18 @@
   <nav id="navbar">
     <div class="nav-container">
       <a href="#hero" class="nav-logo">MA</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#about"      class="nav-link">About</a></li>
-        <li><a href="#skills"     class="nav-link">Skills</a></li>
-        <li><a href="#experience" class="nav-link">Experience</a></li>
-        <li><a href="#contact"    class="nav-link">Contact</a></li>
+        <li><a href="#about"      class="nav-link" data-i18n="nav.about">About</a></li>
+        <li><a href="#skills"     class="nav-link" data-i18n="nav.skills">Skills</a></li>
+        <li><a href="#experience" class="nav-link" data-i18n="nav.experience">Experience</a></li>
+        <li><a href="#contact"    class="nav-link" data-i18n="nav.contact">Contact</a></li>
       </ul>
+      <div class="nav-end">
+        <button id="langToggle" class="lang-btn">ES</button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -43,27 +46,27 @@
           <span id="typedRole"></span><span class="cursor">|</span>
           <span class="title-bracket">/&gt;</span>
         </div>
-        <p class="hero-tagline">
-          9+ years building the scalable backend systems for<br>banking & fintech — one API at a time.
+        <p class="hero-tagline" data-i18n="hero.tagline">
+          9+ years building the scalable backend systems for<br>banking &amp; fintech — one API at a time.
         </p>
         <div class="hero-cta">
-          <a href="#experience" class="btn btn-primary">View Experience</a>
-          <a href="#contact"    class="btn btn-ghost">Get in Touch</a>
+          <a href="#experience" class="btn btn-primary" data-i18n="hero.viewExperience">View Experience</a>
+          <a href="#contact"    class="btn btn-ghost"   data-i18n="hero.getInTouch">Get in Touch</a>
         </div>
         <div class="hero-stats">
           <div class="hero-stat">
             <span class="stat-value">9+</span>
-            <span class="stat-label">Years</span>
+            <span class="stat-label" data-i18n="hero.years">Years</span>
           </div>
           <div class="stat-divider"></div>
           <div class="hero-stat">
             <span class="stat-value">7</span>
-            <span class="stat-label">Companies</span>
+            <span class="stat-label" data-i18n="hero.companies">Companies</span>
           </div>
           <div class="stat-divider"></div>
           <div class="hero-stat">
             <span class="stat-value">20+</span>
-            <span class="stat-label">Technologies</span>
+            <span class="stat-label" data-i18n="hero.technologies">Technologies</span>
           </div>
         </div>
       </div>
@@ -78,30 +81,30 @@
     <section id="about" class="section">
       <div class="container">
         <div class="section-header" data-reveal>
-          <span class="section-tag">01 · About</span>
-          <h2 class="section-title">Who I Am</h2>
+          <span class="section-tag" data-i18n="about.tag">01 · About</span>
+          <h2 class="section-title" data-i18n="about.title">Who I Am</h2>
         </div>
         <div class="about-grid">
           <div class="about-text" data-reveal>
-            <p>Senior Software Engineer with over <strong>9 years of experience</strong> designing, developing, and optimizing scalable backend systems across the <strong>banking and fintech</strong> industries.</p>
-            <p>Specialized in software architecture, clean code practices, and performance improvement. Currently part of the <strong>Architecture Team at Banco Galicia</strong>, driving API optimization, refactoring initiatives, and the adoption of AI tools to enhance developer efficiency.</p>
-            <p>Passionate about continuous improvement, automation, and modern engineering practices — including <strong>prompt engineering</strong> and integrating AI into development workflows.</p>
+            <p data-i18n="about.p1">Senior Software Engineer with over <strong>9 years of experience</strong> designing, developing, and optimizing scalable backend systems across the <strong>banking and fintech</strong> industries.</p>
+            <p data-i18n="about.p2">Specialized in software architecture, clean code practices, and performance improvement. Currently part of the <strong>Architecture Team at Banco Galicia</strong>, driving API optimization, refactoring initiatives, and the adoption of AI tools to enhance developer efficiency.</p>
+            <p data-i18n="about.p3">Passionate about continuous improvement, automation, and modern engineering practices — including <strong>prompt engineering</strong> and integrating AI into development workflows.</p>
             <div class="about-highlights">
               <div class="highlight-item">
                 <svg class="hi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                .NET &amp; C# Specialist
+                <span data-i18n="about.highlight1">.NET &amp; C# Specialist</span>
               </div>
               <div class="highlight-item">
                 <svg class="hi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-                Backend Architecture
+                <span data-i18n="about.highlight2">Backend Architecture</span>
               </div>
               <div class="highlight-item">
                 <svg class="hi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                Banking &amp; Fintech Systems
+                <span data-i18n="about.highlight3">Banking &amp; Fintech Systems</span>
               </div>
               <div class="highlight-item">
                 <svg class="hi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-                AI-Augmented Development
+                <span data-i18n="about.highlight4">AI-Augmented Development</span>
               </div>
             </div>
           </div>
@@ -111,8 +114,8 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
               </div>
               <div>
-                <div class="icard-label">Location</div>
-                <div class="icard-value">Argentina (Remote-ready)</div>
+                <div class="icard-label" data-i18n="about.locationLabel">Location</div>
+                <div class="icard-value" data-i18n="about.locationValue">Argentina</div>
               </div>
             </div>
             <div class="info-card">
@@ -120,7 +123,7 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
               </div>
               <div>
-                <div class="icard-label">Current Role</div>
+                <div class="icard-label" data-i18n="about.roleLabel">Current Role</div>
                 <div class="icard-value">Architecture Team · Banco Galicia</div>
               </div>
             </div>
@@ -129,7 +132,7 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               </div>
               <div>
-                <div class="icard-label">Email</div>
+                <div class="icard-label" data-i18n="about.emailLabel">Email</div>
                 <div class="icard-value">mica.s.arevalo@gmail.com</div>
               </div>
             </div>
@@ -138,7 +141,7 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.6 19.79 19.79 0 0 1 1.6 5a2 2 0 0 1 1.99-2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.4a16 16 0 0 0 6.08 6.08l1.24-1.24a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               </div>
               <div>
-                <div class="icard-label">Phone</div>
+                <div class="icard-label" data-i18n="about.phoneLabel">Phone</div>
                 <div class="icard-value">+54 9 3446 663891</div>
               </div>
             </div>
@@ -151,8 +154,8 @@
     <section id="skills" class="section section-alt">
       <div class="container">
         <div class="section-header" data-reveal>
-          <span class="section-tag">02 · Skills</span>
-          <h2 class="section-title">Technical Expertise</h2>
+          <span class="section-tag" data-i18n="skills.tag">02 · Skills</span>
+          <h2 class="section-title" data-i18n="skills.title">Technical Expertise</h2>
         </div>
         <div class="skills-grid">
 
@@ -178,7 +181,7 @@
               <div class="skill-icon database">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
               </div>
-              <h3>Databases</h3>
+              <h3 data-i18n="skills.databases">Databases</h3>
             </div>
             <div class="skill-tags">
               <span class="stag">SQL Server</span>
@@ -194,7 +197,7 @@
               <div class="skill-icon architecture">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
               </div>
-              <h3>Architecture</h3>
+              <h3 data-i18n="skills.architecture">Architecture</h3>
             </div>
             <div class="skill-tags">
               <span class="stag">DDD</span>
@@ -211,7 +214,7 @@
               <div class="skill-icon messaging">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
               </div>
-              <h3>Messaging &amp; Integration</h3>
+              <h3 data-i18n="skills.messaging">Messaging &amp; Integration</h3>
             </div>
             <div class="skill-tags">
               <span class="stag">Kafka</span>
@@ -244,7 +247,7 @@
               <div class="skill-icon ai">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
               </div>
-              <h3>AI &amp; Automation</h3>
+              <h3 data-i18n="skills.ai">AI &amp; Automation</h3>
             </div>
             <div class="skill-tags">
               <span class="stag">GitHub Copilot</span>
@@ -264,8 +267,8 @@
     <section id="experience" class="section">
       <div class="container">
         <div class="section-header" data-reveal>
-          <span class="section-tag">03 · Experience</span>
-          <h2 class="section-title">Work History</h2>
+          <span class="section-tag" data-i18n="exp.tag">03 · Experience</span>
+          <h2 class="section-title" data-i18n="exp.title">Work History</h2>
         </div>
         <div class="timeline">
 
@@ -277,13 +280,13 @@
                   <h3 class="tl-role">Senior Software Engineer</h3>
                   <div class="tl-company">Banco Galicia — Architecture Team</div>
                 </div>
-                <span class="tl-period current">May 2024 – Present</span>
+                <span class="tl-period current" data-i18n="exp.job1.period">May 2024 – Present</span>
               </div>
-              <p class="tl-desc">Implementing API optimization and architectural improvements across the engineering org. Championing the adoption of AI tools — GitHub Copilot and prompt files — to boost developer efficiency and code quality.</p>
+              <p class="tl-desc" data-i18n="exp.job1.desc">Implementing API optimization and architectural improvements across the engineering org. Championing the adoption of AI tools — GitHub Copilot and prompt files — to boost developer efficiency and code quality.</p>
               <ul class="tl-list">
-                <li>Developed APIs for international banking transactions integrated with SWIFT</li>
-                <li>Implemented automatic reconciliation systems for banking transactions</li>
-                <li>Integrated AI-assisted workflows with GitHub Copilot and structured prompt files</li>
+                <li data-i18n="exp.job1.li1">Developed APIs for international banking transactions integrated with SWIFT</li>
+                <li data-i18n="exp.job1.li2">Implemented automatic reconciliation systems for banking transactions</li>
+                <li data-i18n="exp.job1.li3">Integrated AI-assisted workflows with GitHub Copilot and structured prompt files</li>
               </ul>
               <div class="tl-tags">
                 <span class="ttag">.NET 8/9</span><span class="ttag">C#</span><span class="ttag">Entity Framework Core</span><span class="ttag">SQL Server</span><span class="ttag">OpenShift</span><span class="ttag">Jenkins</span>
@@ -299,12 +302,12 @@
                   <h3 class="tl-role">Senior Software Engineer</h3>
                   <div class="tl-company">Bamboo Payments Systems</div>
                 </div>
-                <span class="tl-period">Feb 2023 – May 2024</span>
+                <span class="tl-period" data-i18n="exp.job2.period">Feb 2023 – May 2024</span>
               </div>
-              <p class="tl-desc">Built payment integrations for LATAM markets at a leading online payment processor offering PAYIN and PAYOUT solutions across multiple countries.</p>
+              <p class="tl-desc" data-i18n="exp.job2.desc">Built payment integrations for LATAM markets at a leading online payment processor offering PAYIN and PAYOUT solutions across multiple countries.</p>
               <ul class="tl-list">
-                <li>Integrated Infinia (Uruguay/Argentina), Movii (Colombia), Yape (Peru)</li>
-                <li>Implemented Pago Fácil (Argentina) and PSE ACH (Colombia) payment methods</li>
+                <li data-i18n="exp.job2.li1">Integrated Infinia (Uruguay/Argentina), Movii (Colombia), Yape (Peru)</li>
+                <li data-i18n="exp.job2.li2">Implemented Pago Fácil (Argentina) and PSE ACH (Colombia) payment methods</li>
               </ul>
               <div class="tl-tags">
                 <span class="ttag">.NET 6/7/8</span><span class="ttag">C#</span><span class="ttag">Dapper</span><span class="ttag">PostgreSQL</span><span class="ttag">Redis</span><span class="ttag">DDD</span><span class="ttag">AWS</span><span class="ttag">Kafka</span>
@@ -320,12 +323,12 @@
                   <h3 class="tl-role">Senior Software Engineer</h3>
                   <div class="tl-company">Banco Galicia</div>
                 </div>
-                <span class="tl-period">Feb 2022 – Feb 2023</span>
+                <span class="tl-period" data-i18n="exp.job3.period">Feb 2022 – Feb 2023</span>
               </div>
-              <p class="tl-desc">Developed critical banking infrastructure for Argentina's leading private bank, handling international financial operations at scale.</p>
+              <p class="tl-desc" data-i18n="exp.job3.desc">Developed critical banking infrastructure for Argentina's leading private bank, handling international financial operations at scale.</p>
               <ul class="tl-list">
-                <li>Built APIs for international banking transactions and SWIFT operations</li>
-                <li>Implemented automatic reconciliation systems for banking transactions</li>
+                <li data-i18n="exp.job3.li1">Built APIs for international banking transactions and SWIFT operations</li>
+                <li data-i18n="exp.job3.li2">Implemented automatic reconciliation systems for banking transactions</li>
               </ul>
               <div class="tl-tags">
                 <span class="ttag">.NET 8</span><span class="ttag">C#</span><span class="ttag">Entity Framework Core</span><span class="ttag">SQL Server</span><span class="ttag">OpenShift</span>
@@ -341,12 +344,12 @@
                   <h3 class="tl-role">Software Engineer</h3>
                   <div class="tl-company">Globant</div>
                 </div>
-                <span class="tl-period">Apr 2021 – Feb 2022</span>
+                <span class="tl-period" data-i18n="exp.job4.period">Apr 2021 – Feb 2022</span>
               </div>
-              <p class="tl-desc">Contributed to marketplace platform development at a global software engineering company, building complex distributed systems with modern messaging patterns.</p>
+              <p class="tl-desc" data-i18n="exp.job4.desc">Contributed to marketplace platform development at a global software engineering company, building complex distributed systems with modern messaging patterns.</p>
               <ul class="tl-list">
-                <li>Developed APIs for a marketplace application with chatbot integration</li>
-                <li>Implemented microservices communication via gRPC and Azure Service Bus</li>
+                <li data-i18n="exp.job4.li1">Developed APIs for a marketplace application with chatbot integration</li>
+                <li data-i18n="exp.job4.li2">Implemented microservices communication via gRPC and Azure Service Bus</li>
               </ul>
               <div class="tl-tags">
                 <span class="ttag">.NET Core 3.1</span><span class="ttag">C#</span><span class="ttag">ElasticSearch</span><span class="ttag">Redis</span><span class="ttag">RabbitMQ</span><span class="ttag">gRPC</span><span class="ttag">Azure Service Bus</span>
@@ -362,12 +365,12 @@
                   <h3 class="tl-role">Software Engineer</h3>
                   <div class="tl-company">AIS Group</div>
                 </div>
-                <span class="tl-period">Jan 2019 – Mar 2021</span>
+                <span class="tl-period" data-i18n="exp.job5.period">Jan 2019 – Mar 2021</span>
               </div>
-              <p class="tl-desc">Delivered financial software solutions for major international banking clients at a consulting firm specializing in fintech.</p>
+              <p class="tl-desc" data-i18n="exp.job5.desc">Delivered financial software solutions for major international banking clients at a consulting firm specializing in fintech.</p>
               <ul class="tl-list">
-                <li>Built APIs and batch processes for debt recovery: Itaú, BBVA, Forum Chile, ICBC</li>
-                <li>Developed reporting systems and financial analytics tooling</li>
+                <li data-i18n="exp.job5.li1">Built APIs and batch processes for debt recovery: Itaú, BBVA, Forum Chile, ICBC</li>
+                <li data-i18n="exp.job5.li2">Developed reporting systems and financial analytics tooling</li>
               </ul>
               <div class="tl-tags">
                 <span class="ttag">.NET Core 3.1</span><span class="ttag">C#</span><span class="ttag">Oracle</span><span class="ttag">SQL Server</span><span class="ttag">OpenShift</span><span class="ttag">Jenkins</span>
@@ -383,11 +386,11 @@
                   <h3 class="tl-role">Software Engineer</h3>
                   <div class="tl-company">Nosis</div>
                 </div>
-                <span class="tl-period">May 2018 – Jan 2019</span>
+                <span class="tl-period" data-i18n="exp.job6.period">May 2018 – Jan 2019</span>
               </div>
-              <p class="tl-desc">Built internal tools for a company providing commercial and financial information analytics.</p>
+              <p class="tl-desc" data-i18n="exp.job6.desc">Built internal tools for a company providing commercial and financial information analytics.</p>
               <ul class="tl-list">
-                <li>Developed frontend and backend features for an internal CRM system</li>
+                <li data-i18n="exp.job6.li1">Developed frontend and backend features for an internal CRM system</li>
               </ul>
               <div class="tl-tags">
                 <span class="ttag">.NET Framework 4.5</span><span class="ttag">C#</span><span class="ttag">JavaScript</span><span class="ttag">SQL Server</span>
@@ -403,11 +406,11 @@
                   <h3 class="tl-role">Software Engineer</h3>
                   <div class="tl-company">Sofrecom</div>
                 </div>
-                <span class="tl-period">Nov 2016 – Apr 2018</span>
+                <span class="tl-period" data-i18n="exp.job7.period">Nov 2016 – Apr 2018</span>
               </div>
-              <p class="tl-desc">Started my professional career building enterprise intranet and SharePoint solutions for major clients across multiple industries.</p>
+              <p class="tl-desc" data-i18n="exp.job7.desc">Started my professional career building enterprise intranet and SharePoint solutions for major clients across multiple industries.</p>
               <ul class="tl-list">
-                <li>Developed SharePoint solutions for AVON, EDENOR, YACYRETÁ, and Sofrecom France</li>
+                <li data-i18n="exp.job7.li1">Developed SharePoint solutions for AVON, EDENOR, YACYRETÁ, and Sofrecom France</li>
               </ul>
               <div class="tl-tags">
                 <span class="ttag">.NET Framework 4.5</span><span class="ttag">SharePoint 2013/2016</span><span class="ttag">C#</span><span class="ttag">SQL Server</span>
@@ -423,11 +426,11 @@
     <section id="contact" class="section section-alt">
       <div class="container">
         <div class="section-header" data-reveal>
-          <span class="section-tag">04 · Contact</span>
-          <h2 class="section-title">Let's Connect</h2>
+          <span class="section-tag" data-i18n="contact.tag">04 · Contact</span>
+          <h2 class="section-title" data-i18n="contact.title">Let's Connect</h2>
         </div>
         <div class="contact-wrap" data-reveal>
-          <p class="contact-intro">I'm always open to discussing new opportunities, architectural challenges, or simply connecting with fellow engineers. Feel free to reach out!</p>
+          <p class="contact-intro" data-i18n="contact.intro">I'm always open to discussing new opportunities, architectural challenges, or simply connecting with fellow engineers. Feel free to reach out!</p>
           <div class="contact-links">
 
             <a href="mailto:mica.s.arevalo@gmail.com" class="clink">
@@ -435,13 +438,12 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               </div>
               <div class="clink-info">
-                <span class="clink-label">Email</span>
+                <span class="clink-label" data-i18n="contact.emailLabel">Email</span>
                 <span class="clink-value">mica.s.arevalo@gmail.com</span>
               </div>
               <svg class="clink-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
 
-            <!-- UPDATE this href with your actual LinkedIn URL -->
             <a href="https://www.linkedin.com/in/micaela-arevalo" target="_blank" rel="noopener noreferrer" class="clink">
               <div class="clink-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
@@ -458,8 +460,8 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
               </div>
               <div class="clink-info">
-                <span class="clink-label">Location</span>
-                <span class="clink-value">Argentina · Remote-ready</span>
+                <span class="clink-label" data-i18n="contact.locationLabel">Location</span>
+                <span class="clink-value" data-i18n="contact.locationValue">Argentina · Remote-ready</span>
               </div>
             </div>
 
@@ -472,7 +474,7 @@
 
   <footer>
     <div class="container">
-      <p>Designed &amp; built by <span class="ft-name">Micaela Arévalo</span> · 2024</p>
+      <p><span data-i18n="footer.builtBy">Designed &amp; built by</span> <span class="ft-name">Micaela Arévalo</span> · 2024</p>
       <p class="ft-stack">HTML · CSS · Vanilla JS</p>
     </div>
   </footer>
